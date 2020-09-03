@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "9jpekDKB200jIvHtA95pTL0M7JGpXaLUG9vUf4/Stbim5r6kS4VcV7afuHJ1L9O36FSXS2Tg8oVTNy6IREkT/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Randy\\source\\repos\\Surfer\\Surfer\\Surfer\\Surfer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Randy\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\Randy\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+  ],
+  "logs": []
+}
