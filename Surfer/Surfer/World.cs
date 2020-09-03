@@ -13,30 +13,36 @@ namespace Surfer
     {
 
         public Spirit spirit;
-        public List<Platform> platforms;
 
         public World()
         {
+            Globals.acceleration = -2f;
+
             // Main Character
-            spirit = new Spirit("spirit", new Vector2(500f, 120f), new Vector2(40f, 64f), new Vector2(2f, 2f));
+            spirit = new Spirit("spirit", new Vector2(500f, 120f), new Vector2(40f, 64f), 2f);
 
             // Add Platforms
-            platforms = new List<Platform>();
-            platforms.Add(new Platform("GroundSprite", new Vector2(500f, 400f), new Vector2(500f, 60f), new Vector2(0f, 0f), false));
+            Globals.platforms = new List<Platform>();
+            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(500f, 400f), new Vector2(500f, 60f), new Vector2(0f, 0f), false));
         
         }
 
         public virtual void Update()
         {
             spirit.Update();
-            foreach (var platform in platforms)
+            foreach (var platform in Globals.platforms)
+            {
                 platform.Update();
+
+            }
+
+            
         }
 
         public virtual void Draw()
         {
             spirit.Draw();
-            foreach (var platform in platforms)
+            foreach (var platform in Globals.platforms)
                 platform.Draw();
         }
 

@@ -7,7 +7,6 @@ namespace Surfer
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        private SpriteBatch _spriteBatch;
 
         public World _world;
 
@@ -27,9 +26,13 @@ namespace Surfer
 
             base.Initialize();
 
-            _graphics.PreferredBackBufferWidth = 1080;
-            _graphics.PreferredBackBufferHeight = 640;
+            _graphics.PreferredBackBufferWidth = 1600;
+            _graphics.PreferredBackBufferHeight = 900;
             _graphics.ApplyChanges();
+
+            Globals.sceneWidth = _graphics.PreferredBackBufferWidth;
+            Globals.sceneHeight = _graphics.PreferredBackBufferHeight;
+
 
 
         }

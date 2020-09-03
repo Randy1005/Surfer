@@ -13,6 +13,16 @@ namespace Surfer
 
         public Vector2 position, dimensions;
         public Texture2D texture;
+        public Rectangle ObjectRect
+        {
+            get
+            {
+                return new Rectangle((int)(position.X - texture.Width/2), (int)(position.Y - texture.Height/2), texture.Width, texture.Height);
+            }
+        }
+
+
+
         public Basic2D(string path, Vector2 pos, Vector2 dims)
         {
             position = pos;
@@ -44,5 +54,7 @@ namespace Surfer
             }
 
         }
+
+        
     }
 }
