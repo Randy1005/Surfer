@@ -45,6 +45,7 @@ namespace Surfer
             // TODO: use this.Content to load your game content here
 
             _world = new World();
+            
 
         }
 
@@ -58,7 +59,8 @@ namespace Surfer
 
 
 
-            _world.Update();
+
+            _world.Update(gameTime);
 
             base.Update(gameTime);
         }

@@ -13,28 +13,24 @@ namespace Surfer
 
         public Vector2 position, dimensions;
         public Texture2D texture;
-        public Rectangle ObjectRect
-        {
-            get
-            {
-                return new Rectangle((int)(position.X - texture.Width/2), (int)(position.Y - texture.Height/2), texture.Width, texture.Height);
-            }
-        }
+        public Rectangle ObjectRect;
+        public float totalSeconds;
 
 
 
         public Basic2D(string path, Vector2 pos, Vector2 dims)
         {
             position = pos;
-            dimensions = dims;
+            dimensions = dims;           
 
             texture = Globals.content.Load<Texture2D>(path);
+            ObjectRect = new Rectangle((int)(position.X - dimensions.X/2), (int)(position.Y - dimensions.Y/2), (int)dimensions.X, (int)dimensions.Y);
         }
 
 
-        public virtual void Update()
+        public virtual void Update(GameTime gameTime)
         {
-            
+           
         }
 
         public virtual void Draw()

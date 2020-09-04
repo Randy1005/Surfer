@@ -19,14 +19,14 @@ namespace Surfer
             Velocity = velocity;
         }
 
-        public override void Update()
+        public override void Update(GameTime gameTime)
         {
 
             if (isMoving)
                 autoMovement();
 
 
-            base.Update();
+            base.Update(gameTime);
         }
 
         public override void Draw()

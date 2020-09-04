@@ -14,7 +14,6 @@ namespace Surfer
 
         public Vector2 Velocity;
         public float Speed;
-        public bool isMidAir;
 
         public Spirit(string path, Vector2 pos, Vector2 dims, float speed) : base(path, pos, dims)
         {
@@ -25,32 +24,46 @@ namespace Surfer
 
 
 
-        public override void Update()
+        public override void Update(GameTime gameTime)
         {
             Move(Globals.keyState);
 
+
+            // gravity: but it's just constant speed along the Y-axis
+            float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            Velocity.Y += Globals.acceleration * 0.5f;
+            
+
+
+
+            // collision with platforms
             foreach (var platform in Globals.platforms)
             {
-                if (!isTouchingTop(platform.ObjectRect))
-                    isMidAir = true;
 
-                if (this.Velocity.X > 0 && isTouchingLeft(platform.ObjectRect) ||
-                    this.Velocity.X < 0 && isTouchingRight(platform.ObjectRect))
+
+                if (Velocity.X > 0 && isTouchingLeft(platform.ObjectRect) ||
+                    Velocity.X < 0 && isTouchingRight(platform.ObjectRect))
 
                 {
-                    this.Velocity.X = 0;
+                    Velocity.X = 0;
                 }
 
-                if (this.Velocity.Y > 0 && isTouchingTop(platform.ObjectRect) ||
-                   this.Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
+                if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect) ||
+                   Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
                 {
-                    this.Velocity.Y = 0;
+                    Velocity.Y = 0;
                 }
             }
 
 
             position += Velocity;
-            Velocity = Vector2.Zero;
+            // had to reset the velocity as it keeps going throught the floor
+            Velocity = new Vector2(0f, 0f);
+
+
+
+            // update the rectangle bounds manually (should do the same for moving platforms)
+            ObjectRect = new Rectangle((int)(position.X - dimensions.X / 2), (int)(position.Y - dimensions.Y / 2), (int)dimensions.X, (int)dimensions.Y);
 
         }
 
@@ -69,16 +82,8 @@ namespace Surfer
             {
                 Velocity.X = Speed;
             }
-            else if (state.IsKeyDown(Keys.S))
-            {
-                Velocity.Y = Speed;
-            }
-            else if (state.IsKeyDown(Keys.W))
-            {
-                Velocity.Y = -Speed;
-            }
+            
 
-           
 
         }
 

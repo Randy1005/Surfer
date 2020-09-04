@@ -16,23 +16,29 @@ namespace Surfer
 
         public World()
         {
-            Globals.acceleration = -2f;
+            Globals.acceleration = 9.8f;
 
             // Main Character
-            spirit = new Spirit("spirit", new Vector2(500f, 120f), new Vector2(40f, 64f), 2f);
+            spirit = new Spirit("spirit", new Vector2(600, 200), new Vector2(40, 64), 3f);
 
             // Add Platforms
             Globals.platforms = new List<Platform>();
-            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(500f, 400f), new Vector2(500f, 60f), new Vector2(0f, 0f), false));
-        
+            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(800, 800), new Vector2(600, 60), new Vector2(0, 0), false));
+            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(900, 750), new Vector2(100, 100), new Vector2(0, 0), false));
+
+
+
+
+
+
         }
 
-        public virtual void Update()
+        public virtual void Update(GameTime gameTime)
         {
-            spirit.Update();
+            spirit.Update(gameTime);
             foreach (var platform in Globals.platforms)
             {
-                platform.Update();
+                platform.Update(gameTime);
 
             }
 
@@ -43,7 +49,9 @@ namespace Surfer
         {
             spirit.Draw();
             foreach (var platform in Globals.platforms)
+            {
                 platform.Draw();
+            }
         }
 
 
