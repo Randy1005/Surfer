@@ -24,9 +24,7 @@ namespace Surfer
             // Add Platforms
             Globals.platforms = new List<Platform>();
             Globals.platforms.Add(new Platform("GroundSprite", new Vector2(800, 800), new Vector2(600, 60), new Vector2(0, 0), false));
-            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(900, 750), new Vector2(100, 100), new Vector2(0, 0), false));
-
-
+            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(900, 720), new Vector2(100, 120), new Vector2(0, 0), false));
 
 
 
@@ -35,11 +33,17 @@ namespace Surfer
 
         public virtual void Update(GameTime gameTime)
         {
+
             spirit.Update(gameTime);
             foreach (var platform in Globals.platforms)
             {
                 platform.Update(gameTime);
 
+            }
+
+            foreach (var particles in spirit.particles)
+            {
+                particles.Update(gameTime);
             }
 
             
@@ -51,6 +55,11 @@ namespace Surfer
             foreach (var platform in Globals.platforms)
             {
                 platform.Draw();
+            }
+
+            foreach (var particles in spirit.particles)
+            {
+                particles.Draw();
             }
         }
 

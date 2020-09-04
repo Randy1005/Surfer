@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Randy/source/repos/Surfer/Surfer/Content/GroundSprite.png</SourceFile>
+  <SourceFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png</SourceFile>
   <SourceTime>2020-08-27T14:18:50.586858-06:00</SourceTime>
-  <DestFile>C:/Users/Randy/source/repos/Surfer/Surfer/Content/bin/DesktopGL/GroundSprite.xnb</DestFile>
-  <DestTime>2020-09-03T15:32:30.5973093-06:00</DestTime>
+  <DestFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/GroundSprite.xnb</DestFile>
+  <DestTime>2020-09-04T01:15:43.1061857-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -5,102 +5,81 @@ using System;
 using System.Diagnostics;
 using System.Net.Mime;
 using Microsoft.Xna.Framework.Content;
-using System.IO;
 using System.Collections.Generic;
 
 namespace Surfer
 {
-    public class Spirit : Basic2D
+    public class Particle : Basic2D
     {
 
+        
         public Vector2 Velocity;
-        public float Speed;
+        public float horizontalSpeed;
+        public List<float> Amplitude;
 
 
-        // test
-        public List<Particle> particles;
+        // information from spirit
+        public Vector2 spiritPos;
 
-        public Spirit(string path, Vector2 pos, Vector2 dims, float speed) : base(path, pos, dims)
+
+
+        private const float particleLifeSpan = 3;
+        private float remainingLifeSpan;
+        public Particle(string path, Vector2 pos, Vector2 dims, float horizontalspeed, Vector2 spiritpos) : base(path, pos, dims)
         {
-            Speed = speed;
-            Velocity = new Vector2(0f, 0f);
-            particles = new List<Particle>();
+            horizontalSpeed = horizontalspeed;
+            spiritPos = spiritpos;
+            Amplitude = new List<float>(3);
+            Amplitude.Add(20f);
+            Amplitude.Add(40f);
+            Amplitude.Add(80f);
 
-            
         }
-
-
-
 
         public override void Update(GameTime gameTime)
         {
-            
-
-
-            Move(Globals.keyState);
-
-
-            // gravity: but it's just constant speed along the Y-axis
-            float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            Velocity.Y += Globals.acceleration * 0.5f;
-            
 
 
 
-            // collision with platforms
-            foreach (var platform in Globals.platforms)
-            {
-
-
-                if (Velocity.X > 0 && isTouchingLeft(platform.ObjectRect) ||
-                    Velocity.X < 0 && isTouchingRight(platform.ObjectRect))
-
-                {
-                    Velocity.X = 0;
-                }
-
-                if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect) ||
-                   Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
-                {
-                    Velocity.Y = 0;
-                }
-            }
-
-
-            position += Velocity;
-            // had to reset the velocity as it keeps going throught the floor
-            Velocity = new Vector2(0f, 0f);
-
-
-
-            // update the rectangle bounds manually (should do the same for moving platforms)
-            ObjectRect = new Rectangle((int)(position.X - dimensions.X / 2), (int)(position.Y - dimensions.Y / 2), (int)dimensions.X, (int)dimensions.Y);
-
+            base.Update(gameTime);
         }
+
 
         public override void Draw()
         {
             base.Draw();
         }
 
-        public void Move(KeyboardState state)
+        public void travel(int waveMode)
         {
-            if (state.IsKeyDown(Keys.A))
+            switch (waveMode)
             {
-                Velocity.X = -Speed;
-            } 
-            else if (state.IsKeyDown(Keys.D))
-            {
-                Velocity.X = Speed;
-            }
-            else if (state.IsKeyDown(Keys.P))
-            {
-                
-            }
-            
+                case 0:
+                    Velocity = new Vector2(position.X + horizontalSpeed,
+                                           spiritPos.Y + Amplitude[0] + (-(float)Math.Cos(position.X * 3f) * Amplitude[0])
+                                           ) - position;
+                    break;
+                case 1:
+                    Velocity = new Vector2(position.X + horizontalSpeed,
+                                           spiritPos.Y + Amplitude[1] + (-(float)Math.Cos(position.X * 3f) * Amplitude[1])
+                                           ) - position;
 
+                    break;
+                case 2:
+                    Velocity = new Vector2(position.X + horizontalSpeed,
+                                           spiritPos.Y + Amplitude[2] + (-(float)Math.Cos(position.X * 3f) * Amplitude[2])
+                                           ) - position;
+                    break;
+            }
 
+            position += Velocity;
         }
+
+        public void resetToSpiritPos(Vector2 spiritPosition)
+        {
+            position = spiritPosition;
+        }
+
 
 
         public bool isTouchingLeft(Rectangle collidingRect)
@@ -135,8 +114,5 @@ namespace Surfer
                    (this.ObjectRect.Right > collidingRect.Left) &&
                    (this.ObjectRect.Left < collidingRect.Right);
         }
-
-
-
     }
 }

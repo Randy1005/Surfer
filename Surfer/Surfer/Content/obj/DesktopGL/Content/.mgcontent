@@ -5,9 +5,11 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png</File>
+    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/spirit.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

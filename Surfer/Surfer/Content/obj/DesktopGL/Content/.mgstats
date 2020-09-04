@@ -1,3 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/GroundSprite.xnb","TextureProcessor","Texture2DContent",3737,131157,0.1610262
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/particle.xnb","TextureProcessor","Texture2DContent",97,2789,0.1307602
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/spirit.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/spirit.xnb","TextureProcessor","Texture2DContent",1716,5593,0.0027025
