@@ -22,7 +22,6 @@ namespace Surfer
         public Vector2 spiritPos;
 
 
-
         private const float particleLifeSpan = 3;
         private float remainingLifeSpan;
         public Particle(string path, Vector2 pos, Vector2 dims, float horizontalspeed, Vector2 spiritpos) : base(path, pos, dims)
@@ -38,8 +37,6 @@ namespace Surfer
 
         public override void Update(GameTime gameTime)
         {
-
-
 
             base.Update(gameTime);
         }
@@ -77,7 +74,7 @@ namespace Surfer
 
         public void resetToSpiritPos(Vector2 spiritPosition)
         {
-            position = spiritPosition;
+
         }
 
 
