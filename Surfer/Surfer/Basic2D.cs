@@ -30,7 +30,10 @@ namespace Surfer
 
         public virtual void Update(GameTime gameTime)
         {
-           
+
+
+            // update the rectangle bounds manually (should do the same for moving platforms)
+            ObjectRect = new Rectangle((int)(position.X - dimensions.X / 2), (int)(position.Y - dimensions.Y / 2), (int)dimensions.X, (int)dimensions.Y);
         }
 
         public virtual void Draw()

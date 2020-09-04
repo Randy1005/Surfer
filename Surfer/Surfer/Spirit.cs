@@ -7,6 +7,7 @@ using System.Net.Mime;
 using Microsoft.Xna.Framework.Content;
 using System.IO;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Surfer
 {
@@ -15,74 +16,92 @@ namespace Surfer
 
         public Vector2 Velocity;
         public float Speed;
+        private const float spawnParticleIntrl = 0.1f;
+        private float remainingIntrl;
 
 
-        // test
+        // particle collection
         public List<Particle> particles;
+        public List<Particle> killList;
 
         public Spirit(string path, Vector2 pos, Vector2 dims, float speed) : base(path, pos, dims)
         {
             Speed = speed;
             Velocity = new Vector2(0f, 0f);
-            particles = new List<Particle>();
 
-            
+
+            // spawn particles
+            remainingIntrl = spawnParticleIntrl;
+            particles = new List<Particle>();
+            killList = new List<Particle>();
+            particles.Add(new Particle("particle", position + new Vector2(20f, 0f), new Vector2(6f, 6f), 1.5f));
         }
 
 
 
-
+        #region basic update and draw
         public override void Update(GameTime gameTime)
         {
-            
+            // particle travel
+            particlesTravel(1);
 
 
+            // spirit movement
             Move(Globals.keyState);
 
 
             // gravity: but it's just constant speed along the Y-axis
             float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
             Velocity.Y += Globals.acceleration * 0.5f;
-            
 
-
-
-            // collision with platforms
-            foreach (var platform in Globals.platforms)
-            {
-
-
-                if (Velocity.X > 0 && isTouchingLeft(platform.ObjectRect) ||
-                    Velocity.X < 0 && isTouchingRight(platform.ObjectRect))
-
-                {
-                    Velocity.X = 0;
-                }
-
-                if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect) ||
-                   Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
-                {
-                    Velocity.Y = 0;
-                }
-            }
-
+            // collisions
+            spiritCollision();
+            particlesCollision();
 
             position += Velocity;
             // had to reset the velocity as it keeps going throught the floor
             Velocity = new Vector2(0f, 0f);
 
 
+            // receive signal to destroy particle
+            foreach (var particle in particles)
+            {
+                if (particle.destroyParticle)
+                    killList.Add(particle);
+            }
+            foreach (Particle p in killList.Where(p => p.destroyParticle == true))
+                particles.Remove(p);
 
-            // update the rectangle bounds manually (should do the same for moving platforms)
-            ObjectRect = new Rectangle((int)(position.X - dimensions.X / 2), (int)(position.Y - dimensions.Y / 2), (int)dimensions.X, (int)dimensions.Y);
+            // spawn particle between intervals
+            var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            remainingIntrl -= timer;
+            if (remainingIntrl <= 0)
+            {
+                // spawn new particle
+                particles.Add(new Particle("particle", position, new Vector2(6f, 6f), 1.5f));
+
+                // reset interval
+                remainingIntrl = spawnParticleIntrl;
+            }
+
+
+
+            base.Update(gameTime);
+            
 
         }
 
         public override void Draw()
         {
             base.Draw();
+
+
         }
 
+        #endregion
+
+
+        #region spirit and particles movement
         public void Move(KeyboardState state)
         {
             if (state.IsKeyDown(Keys.A))
@@ -102,7 +121,14 @@ namespace Surfer
 
         }
 
+        public void particlesTravel(int waveMode)
+        {
+            foreach (var particle in particles)
+                particle.travel(waveMode);
+        }
+        #endregion
 
+        #region collision bound test
         public bool isTouchingLeft(Rectangle collidingRect)
         {
             return (this.ObjectRect.Right + this.Velocity.X > collidingRect.Left) &&
@@ -136,6 +162,52 @@ namespace Surfer
                    (this.ObjectRect.Left < collidingRect.Right);
         }
 
+        #endregion
+
+
+        #region collision callback for spirit and particles
+        public void spiritCollision()
+        {
+            // spirit collision with platforms
+            foreach (var platform in Globals.platforms)
+            {
+
+
+                if (Velocity.X > 0 && isTouchingLeft(platform.ObjectRect) ||
+                    Velocity.X < 0 && isTouchingRight(platform.ObjectRect))
+
+                {
+                    Velocity.X = 0;
+                }
+
+                if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect) ||
+                   Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
+                {
+                    Velocity.Y = 0;
+                }
+            }
+        }
+
+        public void particlesCollision()
+        {
+            // particle collision with platform
+            foreach (var platform in Globals.platforms)
+            {
+                foreach (var particle in particles)
+                {
+                    if (particle.Velocity.X > 0 && particle.isTouchingLeft(platform.ObjectRect) ||
+                        particle.Velocity.X < 0 && particle.isTouchingRight(platform.ObjectRect) ||
+                        particle.Velocity.Y > 0 && particle.isTouchingTop(platform.ObjectRect) ||
+                        particle.Velocity.Y < 0 && particle.isTouchingBottom(platform.ObjectRect))
+                    {
+                        // reset particle position to spirit position
+                        particle.position = position;
+                    }
+                }
+
+            }
+        }
+        #endregion
 
 
     }
