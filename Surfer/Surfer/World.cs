@@ -33,8 +33,8 @@ namespace Surfer
             // Add Platforms
             Globals.platforms = new List<Platform>();
             Globals.platforms.Add(new Platform("GroundSprite", new Vector2(400, 800), new Vector2(600, 60), new Vector2(0, 0), false));
-            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(460, 720), new Vector2(100, 120), new Vector2(0, 0), false));
-
+            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(430, 720), new Vector2(100, 120), new Vector2(0, 0), false));
+            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(900, 720), new Vector2(300, 120), new Vector2(0, 0), false));
 
 
 

@@ -16,7 +16,7 @@ namespace Surfer
 
         public Vector2 Velocity;
         public float Speed;
-        private const double spawnParticleIntrl = 0.00001f;
+        private const double spawnParticleIntrl = 0.0000001f;
         private double remainingIntrl;
         public bool isVisible = true;
 
@@ -38,7 +38,7 @@ namespace Surfer
             killList = new List<Particle>();
 
             // spawn the surfing sprite, but it's invisible at first, will need to toggle visibility
-            surfP = new SurfParticle("surfingPikachu", position, new Vector2(10f, 10f), 2f);
+            surfP = new SurfParticle("surfingPikachu", position, new Vector2(8f, 8f), 2f);
 
         }
 
@@ -262,7 +262,17 @@ namespace Surfer
                     surfP.isVisible = false;
 
                     // show spirit
-                    position = surfP.finalPos;
+                    if (surfP.Velocity.X > 0 && surfP.isTouchingLeft(platform.ObjectRect))
+                        position = surfP.finalPos - new Vector2(20f, 0f);
+                    else if (surfP.Velocity.X < 0 && surfP.isTouchingRight(platform.ObjectRect))
+                        position = surfP.finalPos + new Vector2(20f, 0f);
+                    else if (surfP.Velocity.Y > 0 && surfP.isTouchingTop(platform.ObjectRect))
+                        position = surfP.finalPos - new Vector2(0f, 20f);
+                    else
+                        position = surfP.finalPos + new Vector2(0f, 20f);
+
+
+
                     isVisible = true;
                 }
 

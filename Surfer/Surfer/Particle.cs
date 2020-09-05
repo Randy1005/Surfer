@@ -23,7 +23,7 @@ namespace Surfer
 
 
         // indicating when this particle should be detroyed
-        private const float particleLifeSpan = 2.5f;
+        private const float particleLifeSpan = 3f;
         private float remainingLifeSpan;
         public bool destroyParticle = false;
 
@@ -78,19 +78,22 @@ namespace Surfer
             switch (waveMode)
             {
                 case 0:
+
+
+
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X) / 10f) * Amplitude[0])
+                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[0])
                                            ) - position;
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X) / 10f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X) / 10f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[2])
                                            ) - position;
                     break;
 

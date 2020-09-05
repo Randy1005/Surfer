@@ -90,13 +90,13 @@ namespace Surfer
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[2])
                                            ) - position;
                     break;
 
@@ -114,7 +114,7 @@ namespace Surfer
 
         public override bool isTouchingLeft(Rectangle collidingRect)
         {
-            return (this.ObjectRect.Right + this.Velocity.X > collidingRect.Left) &&
+            return (this.ObjectRect.Right + this.Velocity.X  > collidingRect.Left) &&
                    (this.ObjectRect.Left < collidingRect.Left) &&
                    (this.ObjectRect.Bottom > collidingRect.Top) &&
                    (this.ObjectRect.Top < collidingRect.Bottom);
@@ -122,7 +122,7 @@ namespace Surfer
 
         public override bool isTouchingRight(Rectangle collidingRect)
         {
-            return (this.ObjectRect.Left + this.Velocity.X < collidingRect.Right) &&
+            return (this.ObjectRect.Left + this.Velocity.X  < collidingRect.Right) &&
                    (this.ObjectRect.Right > collidingRect.Right) &&
                    (this.ObjectRect.Bottom > collidingRect.Top) &&
                    (this.ObjectRect.Top < collidingRect.Bottom);
@@ -130,7 +130,7 @@ namespace Surfer
 
         public override bool isTouchingTop(Rectangle collidingRect)
         {
-            return (this.ObjectRect.Bottom + this.Velocity.Y > collidingRect.Top) &&
+            return (this.ObjectRect.Bottom + this.Velocity.Y  > collidingRect.Top) &&
                    (this.ObjectRect.Top < collidingRect.Top) &&
                    (this.ObjectRect.Right > collidingRect.Left) &&
                    (this.ObjectRect.Left < collidingRect.Right);
@@ -139,7 +139,7 @@ namespace Surfer
 
         public override bool isTouchingBottom(Rectangle collidingRect)
         {
-            return (this.ObjectRect.Top + this.Velocity.Y < collidingRect.Bottom) &&
+            return (this.ObjectRect.Top + this.Velocity.Y  < collidingRect.Bottom) &&
                    (this.ObjectRect.Bottom > collidingRect.Bottom) &&
                    (this.ObjectRect.Right > collidingRect.Left) &&
                    (this.ObjectRect.Left < collidingRect.Right);
