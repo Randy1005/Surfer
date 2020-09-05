@@ -47,30 +47,32 @@ namespace Surfer
                 travel(Globals.colorIndex);
 
                 // only allowed to surf for a limited time
-                var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
-                remainingLifeSpan -= timer;
-                if (remainingLifeSpan <= 0)
-                {
+                //var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                //remainingLifeSpan -= timer;
+                //if (remainingLifeSpan <= 0)
+                //{
                     
-                    // set as inactive and hide it, store its final position
-                    finalPos = position;
-                    isActive = false;
-                    isVisible = false;
+                //    // set as inactive and hide it, store its final position
+                //    finalPos = position;
+                //    isActive = false;
+                //    isVisible = false;
 
-                    // show spirit again
-                    Globals.spirit.isVisible = true;
-                    Globals.spirit.position = finalPos;
+                //    // show spirit again
+                //    Globals.spirit.isVisible = true;
+                //    Globals.spirit.position = finalPos;
 
 
-                    remainingLifeSpan = particleLifeSpan;
-                }
+                //    remainingLifeSpan = particleLifeSpan;
+                //}
 
-                base.Update(gameTime);
+                
             } 
             else
             {
                 Velocity = new Vector2(0f, 0f);
             }
+
+            base.Update(gameTime);
         }
 
         public override void Draw()
@@ -85,18 +87,18 @@ namespace Surfer
             {
                 case 0:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[0])
+                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[0])
                                            ) - position;
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 12f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 16f) * Amplitude[2])
                                            ) - position;
                     break;
 

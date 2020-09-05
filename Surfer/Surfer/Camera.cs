@@ -9,13 +9,23 @@ using System.Collections.Generic;
 
 namespace Surfer
 {
-    class Camera
+    public class Camera
     {
         public Matrix Transform { get; private set; }
 
-        public void Follow()
+        public void Follow(Spirit target)
         {
+            var position = Matrix.CreateTranslation(
+                -target.position.X - (target.ObjectRect.Width / 2),
+                -target.position.Y - (target.ObjectRect.Height / 2),
+                0);
 
+            var offset = Matrix.CreateTranslation(
+                Globals.sceneWidth / 2,
+                Globals.sceneHeight / 2,
+                0);
+
+            Transform = position * offset;
         }
 
     }

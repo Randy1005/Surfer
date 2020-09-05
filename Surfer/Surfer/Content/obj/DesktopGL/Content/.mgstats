@@ -1,4 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09 day plat02.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/09 day plat02.xnb","TextureProcessor","Texture2DContent",6929,201485,0.1259446
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09 day plat02_flipV.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/09 day plat02_flipV.xnb","TextureProcessor","Texture2DContent",7299,201485,0.1253382
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BlueLight.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/BlueLight.xnb","TextureProcessor","Texture2DContent",197,16469,0.1358639
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/GroundSprite.xnb","TextureProcessor","Texture2DContent",3737,131157,0.1610262
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/particle.xnb","TextureProcessor","Texture2DContent",97,2789,0.1307602

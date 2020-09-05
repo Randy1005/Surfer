@@ -82,18 +82,18 @@ namespace Surfer
 
 
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[0])
+                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[0])
                                            ) - position;
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 12f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 16f) * Amplitude[2])
                                            ) - position;
                     break;
 

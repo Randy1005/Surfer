@@ -56,7 +56,8 @@ namespace Surfer
 
 
             // gravity: but it's just constant speed along the Y-axis
-            Velocity.Y += Globals.acceleration * 0.2f;
+            if (!surfP.isActive)
+                ApplyGravity(gameTime);
 
             // collisions
             spiritCollision();
@@ -66,7 +67,7 @@ namespace Surfer
 
             // had to reset the velocity as it keeps going through the floor
             position += Velocity;
-            Velocity = new Vector2(0f, 0f);
+            Velocity.X = 0;
 
 
             // receive signal to destroy particle as its lifespan expires
@@ -103,17 +104,13 @@ namespace Surfer
             }
 
 
-            // pause motion of the surf particle is active
-            //if (surfP.isActive)
-            //    Globals.acceleration = 0f;
-            //else
-            //    Globals.acceleration = 9.8f;
             if (surfP.isActive)
             {
+
+                // hide the particles
                 foreach (Particle p in particles)
                     p.isVisible = false;
             }
-
 
 
 
@@ -280,6 +277,18 @@ namespace Surfer
         }
         #endregion
 
+        #region Gravity
+        private void ApplyGravity(GameTime gameTime)
+        {
 
+            float DeltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+
+            if (EnableGravity)
+            {
+                this.Velocity.Y += (98f * DeltaSeconds) * GravityScale;
+            }
+        }
+        #endregion
     }
 }

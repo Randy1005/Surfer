@@ -16,7 +16,8 @@ namespace Surfer
         public Rectangle ObjectRect;
         public float totalSeconds;
 
-
+        public float GravityScale;
+        public bool EnableGravity;
 
         public Basic2D(string path, Vector2 pos, Vector2 dims)
         {

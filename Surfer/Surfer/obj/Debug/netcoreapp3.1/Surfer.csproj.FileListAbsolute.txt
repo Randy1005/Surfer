@@ -55,3 +55,5 @@ C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedLight.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowLight.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\surfingPikachu.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09 day plat02.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09 day plat02_flipV.xnb

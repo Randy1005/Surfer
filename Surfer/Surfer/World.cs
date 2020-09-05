@@ -18,23 +18,40 @@ namespace Surfer
 
         public Spirit spirit;
 
+
         public World()
         {
             Globals.acceleration = 9.8f;
             Globals.colorIndex = 0;
 
-            // Main Character
-            spirit = new Spirit("spirit", new Vector2(200, 730), new Vector2(40, 64), 2f);
+
+
+            // Main Character (start pos: [200, 730])
+            // tunnel [1040, 640]
+            spirit = new Spirit("spirit", new Vector2(1040, 620), new Vector2(40, 64), 0.5f);
             Globals.spirit = spirit;
+            spirit.EnableGravity = true;
+            spirit.GravityScale = 0.1f;
 
             
 
 
             // Add Platforms
             Globals.platforms = new List<Platform>();
-            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(400, 800), new Vector2(600, 60), new Vector2(0, 0), false));
-            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(430, 720), new Vector2(100, 120), new Vector2(0, 0), false));
-            Globals.platforms.Add(new Platform("GroundSprite", new Vector2(900, 720), new Vector2(300, 120), new Vector2(0, 0), false));
+            Globals.platforms.Add(new Platform("09 day plat02", new Vector2(400, 800), new Vector2(600, 60)));
+            Globals.platforms.Add(new Platform("09 day plat02", new Vector2(420, 720), new Vector2(100, 120)));
+            Globals.platforms.Add(new Platform("09 day plat02", new Vector2(900, 720), new Vector2(300, 120)));
+
+            // E1: Narrow tunnel
+            Globals.platforms.Add(new Platform("09 day plat02", new Vector2(1200, 1060), new Vector2(100, 800)));
+            Globals.platforms.Add(new Platform("09 day plat02_flipV", new Vector2(1200, 150), new Vector2(100, 800)));
+
+            // E2: after tunnel
+            // 1. switch to go up
+            // 2. free fall, wait for the platform below
+            Globals.platforms.Add(new Platform("09 day plat02", new Vector2(1480, 620), new Vector2(200, 60)));
+            Globals.platforms.Add(new Platform("09 day plat02", new Vector2(1520, 920), new Vector2(200, 60)));
+
 
 
 
@@ -42,6 +59,8 @@ namespace Surfer
 
         public virtual void Update(GameTime gameTime)
         {
+
+           
             
 
             spirit.Update(gameTime);

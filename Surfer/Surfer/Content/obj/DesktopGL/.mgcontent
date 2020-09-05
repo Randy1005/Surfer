@@ -4,6 +4,8 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09 day plat02.png</File>
+    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09 day plat02_flipV.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BlueLight.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png</File>
@@ -13,6 +15,8 @@
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowLight.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

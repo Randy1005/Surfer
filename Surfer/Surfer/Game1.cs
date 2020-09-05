@@ -9,6 +9,7 @@ namespace Surfer
         private GraphicsDeviceManager _graphics;
 
         public World _world;
+        public Camera camera;
 
         public Game1()
         {
@@ -33,8 +34,7 @@ namespace Surfer
             Globals.sceneWidth = _graphics.PreferredBackBufferWidth;
             Globals.sceneHeight = _graphics.PreferredBackBufferHeight;
 
-
-
+            
         }
 
         protected override void LoadContent()
@@ -45,7 +45,8 @@ namespace Surfer
             // TODO: use this.Content to load your game content here
 
             _world = new World();
-            
+            camera = new Camera();
+
 
         }
 
@@ -62,6 +63,9 @@ namespace Surfer
 
             _world.Update(gameTime);
 
+            if (!Globals.spirit.surfP.isActive)
+                camera.Follow(Globals.spirit);
+
             base.Update(gameTime);
         }
 
@@ -70,7 +74,7 @@ namespace Surfer
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-            Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+            Globals.spriteBatch.Begin(transformMatrix: camera.Transform);
 
 
 
