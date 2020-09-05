@@ -17,6 +17,7 @@ namespace Surfer
         public float horizontalSpeed;
         public List<float> Amplitude;
         public float oscillationCenter;
+        Color[] textureColor;
 
 
 
@@ -37,11 +38,15 @@ namespace Surfer
 
             remainingLifeSpan = particleLifeSpan;
 
+            // get the color pixels of this particle
+            textureColor = new Color[texture.Width * texture.Height];
+            texture.GetData<Color>(textureColor);
+
         }
 
         public override void Update(GameTime gameTime)
         {
-
+            
 
             // let this particle travel for a few seconds and delete it
             var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -52,6 +57,8 @@ namespace Surfer
                 remainingLifeSpan = particleLifeSpan;
             }
 
+
+            
 
 
             // update the rectangle bounds manually (should do the same for moving platforms)
@@ -98,9 +105,31 @@ namespace Surfer
           
         }
 
-        public void resetToSpiritPos(Vector2 spiritPosition)
+        public void setParticleColor(int colorIndex)
         {
+            switch (colorIndex)
+            {
+                case 0:
+                    for (int i = 0; i < textureColor.Length; i++)
+                    {
+                        textureColor[i] = Color.Red;
+                    }
+                    break;
+                case 1:
+                    for (int i = 0; i < textureColor.Length; i++)
+                    {
+                        textureColor[i] = Color.Yellow;
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < textureColor.Length; i++)
+                    {
+                        textureColor[i] = Color.Blue;
+                    }
+                    break;
+            }
 
+            texture.SetData(textureColor);
         }
 
 

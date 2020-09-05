@@ -1,4 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BlueLight.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/BlueLight.xnb","TextureProcessor","Texture2DContent",197,16469,0.1358639
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/GroundSprite.xnb","TextureProcessor","Texture2DContent",3737,131157,0.1610262
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/particle.xnb","TextureProcessor","Texture2DContent",97,2789,0.1307602
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/RedLight.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/RedLight.xnb","TextureProcessor","Texture2DContent",190,16469,0.0024322
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/spirit.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/spirit.xnb","TextureProcessor","Texture2DContent",1716,5593,0.0027025
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowLight.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/YellowLight.xnb","TextureProcessor","Texture2DContent",192,16469,0.0027889

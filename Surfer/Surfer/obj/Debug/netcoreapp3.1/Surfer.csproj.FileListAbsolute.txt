@@ -51,3 +51,6 @@ C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.pdb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.genruntimeconfig.cache
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\particle.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BlueLight.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedLight.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowLight.xnb

@@ -18,5 +18,7 @@ namespace Surfer
         public static SpriteBatch spriteBatch;
         public static KeyboardState keyState;
         public static List<Platform> platforms;
+        public static int colorIndex;
+        public static bool isScrolling;
     }
 }

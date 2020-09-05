@@ -16,7 +16,7 @@ namespace Surfer
 
         public Vector2 Velocity;
         public float Speed;
-        private const float spawnParticleIntrl = 0.1f;
+        private const float spawnParticleIntrl = 0.01f;
         private float remainingIntrl;
 
 
@@ -34,7 +34,9 @@ namespace Surfer
             remainingIntrl = spawnParticleIntrl;
             particles = new List<Particle>();
             killList = new List<Particle>();
-            particles.Add(new Particle("particle", position + new Vector2(20f, 0f), new Vector2(6f, 6f), 1.5f));
+
+            
+
         }
 
 
@@ -43,7 +45,7 @@ namespace Surfer
         public override void Update(GameTime gameTime)
         {
             // particle travel
-            particlesTravel(1);
+            particlesTravel(Globals.colorIndex);
 
 
             // spirit movement
@@ -58,18 +60,18 @@ namespace Surfer
             spiritCollision();
             particlesCollision();
 
+
+            // had to reset the velocity as it keeps going through the floor
             position += Velocity;
-            // had to reset the velocity as it keeps going throught the floor
             Velocity = new Vector2(0f, 0f);
 
 
-            // receive signal to destroy particle
+            // receive signal to destroy particle as its lifespan expires
             foreach (var particle in particles)
-            {
                 if (particle.destroyParticle)
                     killList.Add(particle);
-            }
-            foreach (Particle p in killList.Where(p => p.destroyParticle == true))
+
+            foreach (Particle p in killList)
                 particles.Remove(p);
 
             // spawn particle between intervals
@@ -83,6 +85,7 @@ namespace Surfer
                 // reset interval
                 remainingIntrl = spawnParticleIntrl;
             }
+
 
 
 
