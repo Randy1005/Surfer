@@ -20,5 +20,6 @@ namespace Surfer
         public static List<Platform> platforms;
         public static int colorIndex;
         public static bool isScrolling;
+        public static Spirit spirit;
     }
 }

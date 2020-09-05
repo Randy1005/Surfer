@@ -54,3 +54,4 @@ C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BlueLight.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedLight.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowLight.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\surfingPikachu.xnb

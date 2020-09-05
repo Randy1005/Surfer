@@ -16,13 +16,15 @@ namespace Surfer
 
         public Vector2 Velocity;
         public float Speed;
-        private const float spawnParticleIntrl = 0.01f;
-        private float remainingIntrl;
+        private const double spawnParticleIntrl = 0.00001f;
+        private double remainingIntrl;
+        public bool isVisible = true;
 
 
         // particle collection
         public List<Particle> particles;
         public List<Particle> killList;
+        public SurfParticle surfP;
 
         public Spirit(string path, Vector2 pos, Vector2 dims, float speed) : base(path, pos, dims)
         {
@@ -35,7 +37,8 @@ namespace Surfer
             particles = new List<Particle>();
             killList = new List<Particle>();
 
-            
+            // spawn the surfing sprite, but it's invisible at first, will need to toggle visibility
+            surfP = new SurfParticle("surfingPikachu", position, new Vector2(10f, 10f), 2f);
 
         }
 
@@ -53,12 +56,12 @@ namespace Surfer
 
 
             // gravity: but it's just constant speed along the Y-axis
-            float dt = (float)gameTime.ElapsedGameTime.TotalSeconds;
-            Velocity.Y += Globals.acceleration * 0.5f;
+            Velocity.Y += Globals.acceleration * 0.2f;
 
             // collisions
             spiritCollision();
             particlesCollision();
+            surfParticleCollision();
 
 
             // had to reset the velocity as it keeps going through the floor
@@ -75,7 +78,7 @@ namespace Surfer
                 particles.Remove(p);
 
             // spawn particle between intervals
-            var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            var timer = (double)gameTime.ElapsedGameTime.TotalSeconds;
             remainingIntrl -= timer;
             if (remainingIntrl <= 0)
             {
@@ -86,9 +89,38 @@ namespace Surfer
                 remainingIntrl = spawnParticleIntrl;
             }
 
+            // spawn the SurfParticle when space pressed
+            if (Globals.keyState.IsKeyDown(Keys.Space))
+            {
+                // set the surfing sprite as visible and as active
+                surfP.isVisible = true;
+                surfP.isActive = true;
+
+                // update its position to the spirit's position and set the spirit as invisible
+                surfP.position = position;
+                isVisible = false;
+
+            }
+
+
+            // pause motion of the surf particle is active
+            //if (surfP.isActive)
+            //    Globals.acceleration = 0f;
+            //else
+            //    Globals.acceleration = 9.8f;
+            if (surfP.isActive)
+            {
+                foreach (Particle p in particles)
+                    p.isVisible = false;
+            }
 
 
 
+
+
+
+
+            surfP.Update(gameTime);
             base.Update(gameTime);
             
 
@@ -96,7 +128,10 @@ namespace Surfer
 
         public override void Draw()
         {
-            base.Draw();
+            surfP.Draw();
+
+            if (isVisible)
+                base.Draw();
 
 
         }
@@ -115,12 +150,6 @@ namespace Surfer
             {
                 Velocity.X = Speed;
             }
-            else if (state.IsKeyDown(Keys.P))
-            {
-                
-            }
-            
-
 
         }
 
@@ -168,7 +197,7 @@ namespace Surfer
         #endregion
 
 
-        #region collision callback for spirit and particles
+        #region collision callback for spirit and particles and surfParticle
         public void spiritCollision()
         {
             // spirit collision with platforms
@@ -206,6 +235,35 @@ namespace Surfer
                         // reset particle position to spirit position
                         particle.position = position;
                     }
+                }
+
+            }
+        }
+
+        public void surfParticleCollision()
+        {
+
+            foreach (var platform in Globals.platforms)
+            {
+               
+                if (surfP.Velocity.X > 0 && surfP.isTouchingLeft(platform.ObjectRect) ||
+                    surfP.Velocity.X < 0 && surfP.isTouchingRight(platform.ObjectRect) ||
+                    surfP.Velocity.Y > 0 && surfP.isTouchingTop(platform.ObjectRect) ||
+                    surfP.Velocity.Y < 0 && surfP.isTouchingBottom(platform.ObjectRect))
+                {
+                    
+
+                    // store final position
+                    if (surfP.isActive)
+                        surfP.finalPos = surfP.position;
+
+                    // set surfP as inactive and hide it
+                    surfP.isActive = false;
+                    surfP.isVisible = false;
+
+                    // show spirit
+                    position = surfP.finalPos;
+                    isVisible = true;
                 }
 
             }

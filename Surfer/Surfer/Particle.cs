@@ -18,11 +18,12 @@ namespace Surfer
         public List<float> Amplitude;
         public float oscillationCenter;
         Color[] textureColor;
+        public bool isVisible = true;
 
 
 
         // indicating when this particle should be detroyed
-        private const float particleLifeSpan = 4;
+        private const float particleLifeSpan = 2.5f;
         private float remainingLifeSpan;
         public bool destroyParticle = false;
 
@@ -46,7 +47,7 @@ namespace Surfer
 
         public override void Update(GameTime gameTime)
         {
-            
+ 
 
             // let this particle travel for a few seconds and delete it
             var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -58,54 +59,48 @@ namespace Surfer
             }
 
 
-            
-
-
-            // update the rectangle bounds manually (should do the same for moving platforms)
-            ObjectRect = new Rectangle((int)(position.X - dimensions.X / 2), (int)(position.Y - dimensions.Y / 2), (int)dimensions.X, (int)dimensions.Y);
-
 
             base.Update(gameTime);
         }
 
         public override void Draw()
         {
-            base.Draw();
+            if (isVisible)
+                base.Draw();
         }
 
 
 
 
-        public void travel(int waveMode)
+        public virtual void travel(int waveMode)
         {
 
             switch (waveMode)
             {
                 case 0:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[0])
+                                           (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X) / 10f) * Amplitude[0])
                                            ) - position;
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X) / 10f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 10f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X) / 10f) * Amplitude[2])
                                            ) - position;
                     break;
 
             }
 
-
             position += Velocity;
           
         }
 
-        public void setParticleColor(int colorIndex)
+        public virtual void setParticleColor(int colorIndex)
         {
             switch (colorIndex)
             {
@@ -134,7 +129,7 @@ namespace Surfer
 
 
 
-        public bool isTouchingLeft(Rectangle collidingRect)
+        public virtual bool isTouchingLeft(Rectangle collidingRect)
         {
             return (this.ObjectRect.Right + this.Velocity.X > collidingRect.Left) &&
                    (this.ObjectRect.Left < collidingRect.Left) &&
@@ -143,7 +138,7 @@ namespace Surfer
 
         }
 
-        public bool isTouchingRight(Rectangle collidingRect)
+        public virtual bool isTouchingRight(Rectangle collidingRect)
         {
             return (this.ObjectRect.Left + this.Velocity.X < collidingRect.Right) &&
                    (this.ObjectRect.Right > collidingRect.Right) &&
@@ -151,7 +146,7 @@ namespace Surfer
                    (this.ObjectRect.Top < collidingRect.Bottom);
         }
 
-        public bool isTouchingTop(Rectangle collidingRect)
+        public virtual bool isTouchingTop(Rectangle collidingRect)
         {
             return (this.ObjectRect.Bottom + this.Velocity.Y > collidingRect.Top) &&
                    (this.ObjectRect.Top < collidingRect.Top) &&
@@ -159,7 +154,7 @@ namespace Surfer
                    (this.ObjectRect.Left < collidingRect.Right);
         }
 
-        public bool isTouchingBottom(Rectangle collidingRect)
+        public virtual bool isTouchingBottom(Rectangle collidingRect)
         {
             return (this.ObjectRect.Top + this.Velocity.Y < collidingRect.Bottom) &&
                    (this.ObjectRect.Bottom > collidingRect.Bottom) &&

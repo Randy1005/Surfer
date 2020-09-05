@@ -4,4 +4,5 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/particle.xnb","TextureProcessor","Texture2DContent",97,2789,0.0023156
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/RedLight.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/RedLight.xnb","TextureProcessor","Texture2DContent",190,16469,0.0033669
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/spirit.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/spirit.xnb","TextureProcessor","Texture2DContent",1716,5593,0.0025555
+"C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/surfingPikachu.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/surfingPikachu.xnb","TextureProcessor","Texture2DContent",6650,201661,0.1282341
 "C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowLight.png","C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/YellowLight.xnb","TextureProcessor","Texture2DContent",192,16469,0.0029121
