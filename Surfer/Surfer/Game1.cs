@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace Surfer
 {
@@ -10,6 +11,7 @@ namespace Surfer
 
         public World _world;
         public Camera camera;
+        public Song bgm;
 
         public Game1()
         {
@@ -18,7 +20,10 @@ namespace Surfer
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
 
+
             
+
+
         }
 
         protected override void Initialize()
@@ -27,14 +32,11 @@ namespace Surfer
 
             base.Initialize();
 
-            _graphics.PreferredBackBufferWidth = 1600;
-            _graphics.PreferredBackBufferHeight = 900;
-            _graphics.ApplyChanges();
-
-            Globals.sceneWidth = _graphics.PreferredBackBufferWidth;
-            Globals.sceneHeight = _graphics.PreferredBackBufferHeight;
-
             
+
+
+
+
         }
 
         protected override void LoadContent()
@@ -42,10 +44,24 @@ namespace Surfer
             Globals.content = this.Content;
             Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
+
+            _graphics.PreferredBackBufferWidth = 1600;
+            _graphics.PreferredBackBufferHeight = 900;
+            _graphics.ApplyChanges();
+
+            Globals.sceneWidth = _graphics.PreferredBackBufferWidth;
+            Globals.sceneHeight = _graphics.PreferredBackBufferHeight;
+
             // TODO: use this.Content to load your game content here
+
+            bgm = Globals.content.Load<Song>("BGM_trimmed");
 
             _world = new World();
             camera = new Camera();
+
+            MediaPlayer.Play(bgm);
+            MediaPlayer.IsRepeating = true;
+            MediaPlayer.Volume = 0.1f;
 
 
         }
@@ -71,7 +87,7 @@ namespace Surfer
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Transparent);
 
             // TODO: Add your drawing code here
             Globals.spriteBatch.Begin(transformMatrix: camera.Transform);

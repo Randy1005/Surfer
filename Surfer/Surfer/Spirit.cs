@@ -16,7 +16,7 @@ namespace Surfer
 
         public Vector2 Velocity;
         public float Speed;
-        private const double spawnParticleIntrl = 0.0000001f;
+        private const double spawnParticleIntrl = 0.05f;
         private double remainingIntrl;
         public bool isVisible = true;
         public bool isMoving = false;
@@ -68,6 +68,7 @@ namespace Surfer
 
 
             // had to reset the velocity as it keeps going through the floor
+            position.X += Velocity.X;
             Velocity.X = 0;
 
 
@@ -103,6 +104,15 @@ namespace Surfer
                 surfP.position = position;
                 isVisible = false;
 
+
+                // play wave SFXs
+                if (Globals.colorIndex == 0)
+                    World.RedWaveSFXInst.Play();
+                else if (Globals.colorIndex == 1)
+                    World.YellowWaveSFXInst.Play();
+                else
+                    World.BlueWaveSFXInst.Play();
+                
             }
 
 
@@ -112,12 +122,18 @@ namespace Surfer
                 // hide the particles
                 foreach (Particle p in particles)
                     p.isVisible = false;
+            } else
+            {
+                // stop all wave SFXs
+                World.RedWaveSFXInst.Stop();
+                World.YellowWaveSFXInst.Stop();
+                World.BlueWaveSFXInst.Stop();
             }
 
 
 
 
-
+            EnableGravity = true;
 
             surfP.Update(gameTime);
             base.Update(gameTime);
@@ -144,23 +160,45 @@ namespace Surfer
             if (state.IsKeyDown(Keys.A))
             {
                 Velocity.X = -Speed;
-
+                World.walkSFXInst.Play();
 
             } 
             else if (state.IsKeyDown(Keys.D))
             {
                 Velocity.X = Speed;
-              
-
+                World.walkSFXInst.Play();
             }
+            else
+            {
+                World.walkSFXInst.Stop();
+            }
+
+            
 
 
         }
 
         public void particlesTravel(int waveMode, GameTime gameTime)
         {
-            foreach (var particle in particles)
-                particle.travel(waveMode, gameTime);
+
+            //for (int i = 0; i < particles.Count; i++)
+            //{
+            //    switch (waveMode)
+            //    {
+            //        case 0:
+            //            particles[i].position = new Vector2(position.X + 20 * i, (20 * (float)Math.Cos(20 * i)) + position.Y - ObjectRect.Height / 2);
+            //            break;
+            //        case 1:
+            //            particles[i].position = new Vector2(position.X + 20 * i, (60 * (float)Math.Cos(20 * i)) + position.Y - ObjectRect.Height / 2);
+            //            break;
+
+            //    }
+            //}
+
+
+            foreach (var p in particles)
+                p.travel(waveMode, gameTime);
+                
         }
         #endregion
 
@@ -216,11 +254,19 @@ namespace Surfer
                     Velocity.X = 0;
                 }
 
-                if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect) ||
-                   Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
+
+                if (Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
                 {
                     Velocity.Y = 0;
                 }
+
+                if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect))
+                {
+                    Velocity.Y = 0;
+                    position.Y -= 0.05f;
+                }
+
+
             }
         }
 
@@ -278,6 +324,10 @@ namespace Surfer
 
 
                     isVisible = true;
+
+                    World.hitWallSFXInst.Play();
+
+
                 }
 
             }
@@ -295,7 +345,7 @@ namespace Surfer
             {
                 
                 Velocity.Y += (98f * DeltaSeconds) * GravityScale;
-                position += Velocity;
+                position.Y += Velocity.Y;
             }
         }
         #endregion

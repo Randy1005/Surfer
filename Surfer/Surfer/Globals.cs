@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Net.Mime;
 using Microsoft.Xna.Framework.Content;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework.Audio;
 
 namespace Surfer
 {
@@ -21,5 +22,12 @@ namespace Surfer
         public static int colorIndex;
         public static bool isScrolling;
         public static Spirit spirit;
+
+        public static SoundEffect WalkingSFX;
+        public static SoundEffect HitWallSFX;
+        public static SoundEffect RedWaveSFX;
+        public static SoundEffect YellowWaveSFX;
+        public static SoundEffect BlueWaveSFX;
+        public static SoundEffect FallSFX;
     }
 }

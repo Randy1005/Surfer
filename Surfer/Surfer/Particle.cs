@@ -44,7 +44,6 @@ namespace Surfer
 
         public override void Update(GameTime gameTime)
         {
-            
 
             // let this particle travel for a few seconds and delete it
             var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -82,13 +81,13 @@ namespace Surfer
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 12f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 14f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 16f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 20f) * Amplitude[2])
                                            ) - position;
                     break;
 
@@ -96,6 +95,7 @@ namespace Surfer
 
 
             position += Velocity;
+
 
         }
 
@@ -118,7 +118,7 @@ namespace Surfer
                 case 2:
                     for (int i = 0; i < textureColor.Length; i++)
                     {
-                        textureColor[i] = Color.Blue;
+                        textureColor[i] = Color.DodgerBlue;
                     }
                     break;
             }
