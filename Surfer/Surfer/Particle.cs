@@ -10,9 +10,7 @@ using System.Collections.Generic;
 namespace Surfer
 {
     public class Particle : Basic2D
-    {
-
-        
+    {      
         public Vector2 Velocity;
         public float horizontalSpeed;
         public List<float> Amplitude;
@@ -21,9 +19,8 @@ namespace Surfer
         public bool isVisible = true;
 
 
-
         // indicating when this particle should be detroyed
-        private const float particleLifeSpan = 3f;
+        private const float particleLifeSpan = 2.5f;
         private float remainingLifeSpan;
         public bool destroyParticle = false;
 
@@ -31,7 +28,7 @@ namespace Surfer
         {
             horizontalSpeed = horizontalspeed;;
             Amplitude = new List<float>(3);
-            Amplitude.Add(30f);
+            Amplitude.Add(20f);
             Amplitude.Add(100f);
             Amplitude.Add(200f);
 
@@ -47,7 +44,7 @@ namespace Surfer
 
         public override void Update(GameTime gameTime)
         {
- 
+            
 
             // let this particle travel for a few seconds and delete it
             var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -57,6 +54,7 @@ namespace Surfer
                 destroyParticle = true;
                 remainingLifeSpan = particleLifeSpan;
             }
+
 
 
 
@@ -71,15 +69,12 @@ namespace Surfer
 
 
 
-
-        public virtual void travel(int waveMode)
+        public virtual void travel(int waveMode, GameTime gameTime)
         {
 
             switch (waveMode)
             {
                 case 0:
-
-
 
                     Velocity = new Vector2(position.X + horizontalSpeed,
                                            (oscillationCenter - Amplitude[0] - (float)Math.Cos((position.X + horizontalSpeed) / 8f) * Amplitude[0])
@@ -99,8 +94,9 @@ namespace Surfer
 
             }
 
+
             position += Velocity;
-          
+
         }
 
         public virtual void setParticleColor(int colorIndex)

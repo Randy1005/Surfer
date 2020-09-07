@@ -16,8 +16,8 @@ namespace Surfer
         public void Follow(Spirit target)
         {
             var position = Matrix.CreateTranslation(
-                -target.position.X - (target.ObjectRect.Width / 2),
-                -target.position.Y - (target.ObjectRect.Height / 2),
+                -target.position.X - (target.ObjectRect.Width * 1.1f / 2),
+                -target.position.Y - (target.ObjectRect.Height * 1.1f / 2),
                 0);
 
             var offset = Matrix.CreateTranslation(
@@ -25,7 +25,7 @@ namespace Surfer
                 Globals.sceneHeight / 2,
                 0);
 
-            Transform = position * offset;
+            Transform = position * offset * Matrix.CreateScale(1.1f);
         }
 
     }

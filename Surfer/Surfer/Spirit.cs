@@ -19,6 +19,7 @@ namespace Surfer
         private const double spawnParticleIntrl = 0.0000001f;
         private double remainingIntrl;
         public bool isVisible = true;
+        public bool isMoving = false;
 
 
         // particle collection
@@ -38,7 +39,7 @@ namespace Surfer
             killList = new List<Particle>();
 
             // spawn the surfing sprite, but it's invisible at first, will need to toggle visibility
-            surfP = new SurfParticle("surfingPikachu", position, new Vector2(8f, 8f), 2f);
+            surfP = new SurfParticle("surfingPikachu", position, new Vector2(15f, 15f), 3f);
 
         }
 
@@ -47,17 +48,18 @@ namespace Surfer
         #region basic update and draw
         public override void Update(GameTime gameTime)
         {
+
+
             // particle travel
-            particlesTravel(Globals.colorIndex);
+            particlesTravel(Globals.colorIndex, gameTime);
 
 
             // spirit movement
             Move(Globals.keyState);
 
 
-            // gravity: but it's just constant speed along the Y-axis
-            if (!surfP.isActive)
-                ApplyGravity(gameTime);
+            // gravity
+            ApplyGravity(gameTime);
 
             // collisions
             spiritCollision();
@@ -66,8 +68,8 @@ namespace Surfer
 
 
             // had to reset the velocity as it keeps going through the floor
-            position += Velocity;
             Velocity.X = 0;
+
 
 
             // receive signal to destroy particle as its lifespan expires
@@ -84,7 +86,7 @@ namespace Surfer
             if (remainingIntrl <= 0)
             {
                 // spawn new particle
-                particles.Add(new Particle("particle", position, new Vector2(6f, 6f), 1.5f));
+                particles.Add(new Particle("particle", position, new Vector2(6f, 6f), 3f));
 
                 // reset interval
                 remainingIntrl = spawnParticleIntrl;
@@ -142,18 +144,23 @@ namespace Surfer
             if (state.IsKeyDown(Keys.A))
             {
                 Velocity.X = -Speed;
+
+
             } 
             else if (state.IsKeyDown(Keys.D))
             {
                 Velocity.X = Speed;
+              
+
             }
+
 
         }
 
-        public void particlesTravel(int waveMode)
+        public void particlesTravel(int waveMode, GameTime gameTime)
         {
             foreach (var particle in particles)
-                particle.travel(waveMode);
+                particle.travel(waveMode, gameTime);
         }
         #endregion
 
@@ -284,9 +291,11 @@ namespace Surfer
             float DeltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
 
 
-            if (EnableGravity)
+            if (EnableGravity && !surfP.isActive)
             {
-                this.Velocity.Y += (98f * DeltaSeconds) * GravityScale;
+                
+                Velocity.Y += (98f * DeltaSeconds) * GravityScale;
+                position += Velocity;
             }
         }
         #endregion

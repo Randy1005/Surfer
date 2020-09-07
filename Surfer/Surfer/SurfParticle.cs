@@ -35,6 +35,7 @@ namespace Surfer
 
         public SurfParticle(string path, Vector2 pos, Vector2 dims, float horizontalspeed) : base(path, pos, dims, horizontalspeed)
         {
+            
 
         }
 
@@ -44,27 +45,9 @@ namespace Surfer
 
             if (isActive)
             {
-                travel(Globals.colorIndex);
+                oscillationCenter = Globals.spirit.position.Y;
 
-                // only allowed to surf for a limited time
-                //var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
-                //remainingLifeSpan -= timer;
-                //if (remainingLifeSpan <= 0)
-                //{
-                    
-                //    // set as inactive and hide it, store its final position
-                //    finalPos = position;
-                //    isActive = false;
-                //    isVisible = false;
-
-                //    // show spirit again
-                //    Globals.spirit.isVisible = true;
-                //    Globals.spirit.position = finalPos;
-
-
-                //    remainingLifeSpan = particleLifeSpan;
-                //}
-
+                travel(Globals.colorIndex, gameTime);
                 
             } 
             else
@@ -81,7 +64,7 @@ namespace Surfer
                 base.Draw();
         }
 
-        public override void travel(int waveMode)
+        public override void travel(int waveMode, GameTime gameTime)
         {
             switch (waveMode)
             {
