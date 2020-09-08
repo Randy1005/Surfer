@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BGM_trimmed.mp3</SourceFile>
-  <SourceTime>2020-09-07T13:58:54.6102733-06:00</SourceTime>
+  <SourceTime>2020-09-07T19:06:20.5237093-06:00</SourceTime>
   <DestFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/BGM_trimmed.xnb</DestFile>
-  <DestTime>2020-09-07T14:07:51.4925744-06:00</DestTime>
+  <DestTime>2020-09-07T23:09:58.8857014-06:00</DestTime>
   <Importer>Mp3Importer</Importer>
   <ImporterTime>2020-08-10T16:17:54-06:00</ImporterTime>
   <Processor>SongProcessor</Processor>

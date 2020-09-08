@@ -13,10 +13,10 @@ namespace Surfer
     {
         public bool isMoving;
         public Vector2 Velocity;
-
-        public Platform(string path, Vector2 pos, Vector2 dims) : base(path, pos, dims)
+        public int ID;
+        public Platform(string path, Vector2 pos, Vector2 dims, int id) : base(path, pos, dims)
         {
-
+            ID = id;
         }
 
         public override void Update(GameTime gameTime)

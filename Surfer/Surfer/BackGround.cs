@@ -12,9 +12,11 @@ namespace Surfer
     {
 
         public bool moveWithCamera;
+        public Vector2 offset;
         public BackGround(string path, Vector2 pos, Vector2 dims, bool moveWithCam) : base(path, pos, dims)
         {
             moveWithCamera = moveWithCam;
+            offset = position - World.spawnSpots[0];
         }
 
         public override void Update(GameTime gameTime)
@@ -22,7 +24,7 @@ namespace Surfer
 
             if (moveWithCamera)
             {
-                position = Globals.spirit.position;
+                position.X = Globals.spirit.position.X + offset.X;
             }
             base.Update(gameTime);
         }

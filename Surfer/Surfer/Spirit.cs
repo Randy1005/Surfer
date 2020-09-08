@@ -14,12 +14,17 @@ namespace Surfer
     public class Spirit : Basic2D
     {
 
+        protected AnimationManager _animationManager;
+        protected Dictionary<string, Animation> _animations;
+
+
         public Vector2 Velocity;
         public float Speed;
         private const double spawnParticleIntrl = 0.05f;
         private double remainingIntrl;
         public bool isVisible = true;
         public bool isMoving = false;
+        public bool isOnGround = true;
 
 
         // particle collection
@@ -32,6 +37,8 @@ namespace Surfer
             Speed = speed;
             Velocity = new Vector2(0f, 0f);
 
+            // animations
+
 
             // spawn particles
             remainingIntrl = spawnParticleIntrl;
@@ -39,7 +46,7 @@ namespace Surfer
             killList = new List<Particle>();
 
             // spawn the surfing sprite, but it's invisible at first, will need to toggle visibility
-            surfP = new SurfParticle("surfingPikachu", position, new Vector2(15f, 15f), 3f);
+            surfP = new SurfParticle("lightBeam", position, new Vector2(20f, 20f), 3f);
 
         }
 
@@ -118,6 +125,10 @@ namespace Surfer
 
             if (surfP.isActive)
             {
+                // play the transform animation
+                //_animationManager.Play(_animations["TransformToLight"]);
+
+                isOnGround = false;
 
                 // hide the particles
                 foreach (Particle p in particles)
@@ -137,7 +148,7 @@ namespace Surfer
 
             surfP.Update(gameTime);
             base.Update(gameTime);
-            
+
 
         }
 
@@ -147,7 +158,6 @@ namespace Surfer
 
             if (isVisible)
                 base.Draw();
-
 
         }
 
@@ -180,20 +190,6 @@ namespace Surfer
 
         public void particlesTravel(int waveMode, GameTime gameTime)
         {
-
-            //for (int i = 0; i < particles.Count; i++)
-            //{
-            //    switch (waveMode)
-            //    {
-            //        case 0:
-            //            particles[i].position = new Vector2(position.X + 20 * i, (20 * (float)Math.Cos(20 * i)) + position.Y - ObjectRect.Height / 2);
-            //            break;
-            //        case 1:
-            //            particles[i].position = new Vector2(position.X + 20 * i, (60 * (float)Math.Cos(20 * i)) + position.Y - ObjectRect.Height / 2);
-            //            break;
-
-            //    }
-            //}
 
 
             foreach (var p in particles)
@@ -252,18 +248,40 @@ namespace Surfer
 
                 {
                     Velocity.X = 0;
+
+
+                    if (platform.ID == 99)
+                    {
+                        // game over
+                        World.gameOver = true;
+                    }
+
                 }
 
 
                 if (Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
                 {
                     Velocity.Y = 0;
+
+                    if (platform.ID == 99)
+                    {
+                        // game over
+                        World.gameOver = true;
+                    }
                 }
 
                 if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect))
                 {
                     Velocity.Y = 0;
-                    position.Y -= 0.05f;
+                    position.Y -= 0.02f;
+                    isOnGround = true;
+
+                    if (platform.ID == 99)
+                    {
+                        // game over
+                        World.gameOver = true;
+                    }
+
                 }
 
 

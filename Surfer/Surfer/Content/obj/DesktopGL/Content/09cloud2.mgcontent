@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09cloud2.png</SourceFile>
-  <SourceTime>2020-09-03T11:54:53.8661634-06:00</SourceTime>
+  <SourceTime>2020-09-07T19:06:20.5086853-06:00</SourceTime>
   <DestFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/Content/09cloud2.xnb</DestFile>
-  <DestTime>2020-09-07T12:29:53.1839797-06:00</DestTime>
+  <DestTime>2020-09-07T19:06:55.9262722-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

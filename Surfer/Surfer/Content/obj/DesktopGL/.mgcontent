@@ -30,10 +30,12 @@
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BGM_trimmed.mp3</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BlueLight.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png</File>
+    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/lightBeam.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/RedLight.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/spirit.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/surfingPikachu.png</File>
+    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/Timer.spritefont</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/Walking.wav</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowLight.png</File>
     <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowWave.wav</File>
@@ -43,6 +45,8 @@
     <File>Falling.wav</File>
     <File>HittingWall.wav</File>
     <File>RedWave.wav</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

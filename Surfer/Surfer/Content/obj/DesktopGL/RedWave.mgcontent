@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/../../sfx/RedWave.wav</SourceFile>
-  <SourceTime>2020-09-07T23:18:34-06:00</SourceTime>
+  <SourceTime>2020-09-07T19:06:21.1988266-06:00</SourceTime>
   <DestFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/RedWave.xnb</DestFile>
-  <DestTime>2020-09-07T14:20:55.9745013-06:00</DestTime>
+  <DestTime>2020-09-07T23:09:56.7889083-06:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-06:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

@@ -82,3 +82,5 @@ C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedWave.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Walking.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowWave.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Timer.xnb
+C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\lightBeam.xnb
