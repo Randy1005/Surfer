@@ -180,11 +180,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Randy\\source\\repos\\Surfer\\Surfer\\Surfer\\Surfer.csproj",
+      "projectUniqueName": "C:\\Users\\Randy\\source\\repos\\Surfer-master\\Surfer\\Surfer\\Surfer.csproj",
       "projectName": "Surfer",
-      "projectPath": "C:\\Users\\Randy\\source\\repos\\Surfer\\Surfer\\Surfer\\Surfer.csproj",
+      "projectPath": "C:\\Users\\Randy\\source\\repos\\Surfer-master\\Surfer\\Surfer\\Surfer.csproj",
       "packagesPath": "C:\\Users\\Randy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Randy\\source\\repos\\Surfer\\Surfer\\Surfer\\obj\\",
+      "outputPath": "C:\\Users\\Randy\\source\\repos\\Surfer-master\\Surfer\\Surfer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

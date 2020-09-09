@@ -4,47 +4,53 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/../../sfx/BlueWave.wav</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/../../sfx/Falling.wav</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/../../sfx/HittingWall.wav</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/../../sfx/RedWave.wav</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09 day plat02.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09 day plat02_flipV.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09cloud1.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09cloud2.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/09sunormoon.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14background.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14backtree.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14backtreesingle.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14cave.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14fronttree.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14fronttreesingle1.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14fronttreesingle2.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14ground.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14plat1.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14plat2.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14plat3.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14stone1.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14stone2.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14water.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BGM_trimmed.mp3</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/BlueLight.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/GroundSprite.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/lightBeam.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/particle.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/RedLight.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/spirit.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/surfingPikachu.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/Timer.spritefont</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/Walking.wav</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowLight.png</File>
-    <File>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/YellowWave.wav</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/../../sfx/BlueWave.wav</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/../../sfx/Falling.wav</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/../../sfx/HittingWall.wav</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/../../sfx/RedWave.wav</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/09 day plat02.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/09 day plat02_flipV.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/09cloud1.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/09cloud2.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/09sunormoon.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14background.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14backtree.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14backtreesingle.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14cave.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14fronttree.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14fronttreesingle1.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14fronttreesingle2.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14ground.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14plat1.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14plat2.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14plat2_Flip.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14plat3.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14stone1.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14stone2.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14water.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/BGM_trimmed.mp3</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/BlueLight.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/GroundSprite.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/lightBeam.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/particle.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/plat_Ver.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/plat_Ver_Flip.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/RedLight.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/spirit.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/surfingPikachu.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/Timer.spritefont</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/Walking.wav</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/YellowLight.png</File>
+    <File>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/YellowWave.wav</File>
   </SourceFiles>
   <DestFiles>
     <File>BlueWave.wav</File>
     <File>Falling.wav</File>
     <File>HittingWall.wav</File>
     <File>RedWave.wav</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

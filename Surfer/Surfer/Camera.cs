@@ -28,5 +28,20 @@ namespace Surfer
             Transform = position * offset * Matrix.CreateScale(1.1f);
         }
 
+        public void Follow2(Vector2 surfPPos, Vector2 staticPos)
+        {
+            var position = Matrix.CreateTranslation(
+                -surfPPos.X - (20 * 1.1f / 2),
+                -staticPos.Y - (20 * 1.1f / 2),
+                0);
+
+            var offset = Matrix.CreateTranslation(
+                Globals.sceneWidth / 2,
+                Globals.sceneHeight / 2,
+                0);
+
+            Transform = position * offset * Matrix.CreateScale(1.1f);
+        }
+
     }
 }

@@ -217,6 +217,18 @@
 /processorParam:TextureFormat=Color
 /build:14plat2.png
 
+#begin 14plat2_Flip.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:14plat2_Flip.png
+
 #begin 14plat3.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -318,6 +330,30 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:particle.png
+
+#begin plat_Ver.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:plat_Ver.png
+
+#begin plat_Ver_Flip.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:plat_Ver_Flip.png
 
 #begin RedLight.png
 /importer:TextureImporter

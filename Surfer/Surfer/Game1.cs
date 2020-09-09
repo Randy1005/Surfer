@@ -80,7 +80,13 @@ namespace Surfer
             _world.Update(gameTime);
 
             if (!Globals.spirit.surfP.isActive)
+            {
                 camera.Follow(Globals.spirit);
+            }
+            else 
+            {
+                camera.Follow2(Globals.spirit.surfP.position, Globals.spirit.surfPPosStatic);
+            }
 
             base.Update(gameTime);
         }

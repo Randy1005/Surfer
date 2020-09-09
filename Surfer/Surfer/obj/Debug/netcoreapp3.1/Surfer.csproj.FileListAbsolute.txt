@@ -84,3 +84,129 @@ C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowWave.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Timer.xnb
 C:\Users\Randy\source\repos\Surfer\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\lightBeam.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\the_spirit_01_57x20.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09 day plat02.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09 day plat02_flipV.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09cloud1.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09cloud2.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09sunormoon.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14background.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14backtree.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14backtreesingle.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14cave.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14fronttree.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14fronttreesingle1.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14fronttreesingle2.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14ground.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat1.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat2.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat3.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14stone1.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14stone2.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14water.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BGM_trimmed.ogg
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BGM_trimmed.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BlueLight.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BlueWave.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Falling.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\GroundSprite.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\HittingWall.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\lightBeam.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\particle.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedLight.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedWave.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\spirit.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\surfingPikachu.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Timer.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Walking.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowLight.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowWave.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.exe
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.deps.json
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.runtimeconfig.json
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.runtimeconfig.dev.json
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.pdb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.csprojAssemblyReference.cache
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.AssemblyInfoInputs.cache
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.AssemblyInfo.cs
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.csproj.CoreCompileInputs.cache
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.csproj.CopyComplete
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.dll
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.pdb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.genruntimeconfig.cache
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\plat_Ver.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\plat_Ver_Flip.xnb
+F:\Homework\C11\Rapid Prototyping\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat2_Flip.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\the_spirit_01_57x20.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09 day plat02.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09 day plat02_flipV.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09cloud1.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09cloud2.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\09sunormoon.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14background.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14backtree.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14backtreesingle.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14cave.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14fronttree.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14fronttreesingle1.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14fronttreesingle2.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14ground.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat1.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat2.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat2_Flip.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14plat3.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14stone1.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14stone2.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\14water.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BGM_trimmed.ogg
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BGM_trimmed.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BlueLight.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\BlueWave.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Falling.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\GroundSprite.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\HittingWall.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\lightBeam.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\particle.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\plat_Ver.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\plat_Ver_Flip.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedLight.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\RedWave.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\spirit.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\surfingPikachu.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Timer.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\Walking.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowLight.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Content\YellowWave.xnb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.exe
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.deps.json
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.runtimeconfig.json
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.runtimeconfig.dev.json
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\Surfer.pdb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.csprojAssemblyReference.cache
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.AssemblyInfoInputs.cache
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.AssemblyInfo.cs
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.csproj.CoreCompileInputs.cache
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.csproj.CopyComplete
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.dll
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.pdb
+C:\Users\Randy\source\repos\Surfer-master\Surfer\Surfer\obj\Debug\netcoreapp3.1\Surfer.genruntimeconfig.cache

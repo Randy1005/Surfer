@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/14stone1.png</SourceFile>
-  <SourceTime>2020-09-07T19:06:20.5156662-06:00</SourceTime>
-  <DestFile>C:/Users/Randy/source/repos/Surfer/Surfer/Surfer/Content/bin/DesktopGL/14stone1.xnb</DestFile>
-  <DestTime>2020-09-07T23:09:57.7826167-06:00</DestTime>
+  <SourceFile>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/14stone1.png</SourceFile>
+  <SourceTime>2020-09-08T14:01:29+08:00</SourceTime>
+  <DestFile>F:/Homework/C11/Rapid Prototyping/Surfer-master/Surfer/Surfer/Content/bin/DesktopGL/14stone1.xnb</DestFile>
+  <DestTime>2020-09-08T18:42:48.7994163+08:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2020-08-10T16:17:54-06:00</ImporterTime>
+  <ImporterTime>2020-08-10T16:17:54+08:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2020-08-10T16:17:54-06:00</ProcessorTime>
+  <ProcessorTime>2020-08-10T16:17:54+08:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>

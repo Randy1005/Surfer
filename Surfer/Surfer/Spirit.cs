@@ -25,6 +25,7 @@ namespace Surfer
         public bool isVisible = true;
         public bool isMoving = false;
         public bool isOnGround = true;
+        public Vector2 surfPPosStatic;
 
 
         // particle collection
@@ -46,7 +47,7 @@ namespace Surfer
             killList = new List<Particle>();
 
             // spawn the surfing sprite, but it's invisible at first, will need to toggle visibility
-            surfP = new SurfParticle("lightBeam", position, new Vector2(20f, 20f), 3f);
+            surfP = new SurfParticle("lightBeam", position, new Vector2(20f, 20f), 3f, true);
 
         }
 
@@ -104,8 +105,11 @@ namespace Surfer
             if (Globals.keyState.IsKeyDown(Keys.Space))
             {
                 // set the surfing sprite as visible and as active
+                surfP.remainingLifeSpan = surfP.particleLifeSpan[Globals.colorIndex];
                 surfP.isVisible = true;
                 surfP.isActive = true;
+
+                surfPPosStatic = surfP.position;
 
                 // update its position to the spirit's position and set the spirit as invisible
                 surfP.position = position;
@@ -127,7 +131,7 @@ namespace Surfer
             {
                 // play the transform animation
                 //_animationManager.Play(_animations["TransformToLight"]);
-
+                
                 isOnGround = false;
 
                 // hide the particles
@@ -247,40 +251,44 @@ namespace Surfer
                     Velocity.X < 0 && isTouchingRight(platform.ObjectRect))
 
                 {
-                    Velocity.X = 0;
-
 
                     if (platform.ID == 99)
                     {
                         // game over
                         World.gameOver = true;
                     }
+
+                    Velocity.X = 0;
+
 
                 }
 
 
                 if (Velocity.Y < 0 && isTouchingBottom(platform.ObjectRect))
                 {
-                    Velocity.Y = 0;
 
                     if (platform.ID == 99)
                     {
                         // game over
                         World.gameOver = true;
                     }
+                    Velocity.Y = 0;
+
+                    
                 }
 
                 if (Velocity.Y > 0 && isTouchingTop(platform.ObjectRect))
                 {
-                    Velocity.Y = 0;
-                    position.Y -= 0.02f;
-                    isOnGround = true;
 
                     if (platform.ID == 99)
                     {
                         // game over
                         World.gameOver = true;
                     }
+
+                    Velocity.Y = 0;
+                    position.Y -= 0.02f;
+                    isOnGround = true;                 
 
                 }
 
@@ -336,8 +344,8 @@ namespace Surfer
                         position = surfP.finalPos + new Vector2(20f, 0f);
                     else if (surfP.Velocity.Y > 0 && surfP.isTouchingTop(platform.ObjectRect))
                         position = surfP.finalPos - new Vector2(0f, 20f);
-                    else
-                        position = surfP.finalPos + new Vector2(0f, 20f);
+                    else if (surfP.Velocity.Y < 0 && surfP.isTouchingBottom(platform.ObjectRect))
+                        position = surfP.finalPos + new Vector2(0f, 10f);
 
 
 

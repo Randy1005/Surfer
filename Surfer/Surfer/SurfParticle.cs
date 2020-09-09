@@ -29,12 +29,19 @@ namespace Surfer
 
 
         // user can only surf for a limited timespan
-        public const float particleLifeSpan = 2.5f;
+        public List<float> particleLifeSpan;
         public float remainingLifeSpan;
+        public bool _timed;
 
 
-        public SurfParticle(string path, Vector2 pos, Vector2 dims, float horizontalspeed) : base(path, pos, dims, horizontalspeed)
+        public SurfParticle(string path, Vector2 pos, Vector2 dims, float horizontalspeed, bool timed) : base(path, pos, dims, horizontalspeed)
         {
+            _timed = timed;
+
+            particleLifeSpan = new List<float>();
+            particleLifeSpan.Add(2.1f);
+            particleLifeSpan.Add(2.1f);
+            particleLifeSpan.Add(2.1f);
             
 
         }
@@ -46,6 +53,26 @@ namespace Surfer
             if (isActive)
             {
                 oscillationCenter = Globals.spirit.position.Y;
+
+                if (_timed)
+                {
+                    var timer = (float)gameTime.ElapsedGameTime.TotalSeconds;
+                    remainingLifeSpan -= timer;
+                    if (remainingLifeSpan <= 0)
+                    {
+                        // set as inactive
+                        isActive = false;
+                        isVisible = false;
+
+                        // spirit reappear
+                        Globals.spirit.position = position;
+                        Globals.spirit.isVisible = true;
+
+                        
+                    }
+                }
+
+
 
                 travel(Globals.colorIndex, gameTime);
                 
@@ -75,13 +102,13 @@ namespace Surfer
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 14f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 20f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 20f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 30f) * Amplitude[2])
                                            ) - position;
                     break;
 

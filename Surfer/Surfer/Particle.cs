@@ -20,7 +20,7 @@ namespace Surfer
 
 
         // indicating when this particle should be detroyed
-        private const float particleLifeSpan = 2.5f;
+        private const float particleLifeSpan = 2f;
         private float remainingLifeSpan;
         public bool destroyParticle = false;
 
@@ -81,13 +81,13 @@ namespace Surfer
                     break;
                 case 1:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 14f) * Amplitude[1])
+                                           (oscillationCenter - Amplitude[1] - (float)Math.Cos((position.X + horizontalSpeed) / 20f) * Amplitude[1])
                                            ) - position;
 
                     break;
                 case 2:
                     Velocity = new Vector2(position.X + horizontalSpeed,
-                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 20f) * Amplitude[2])
+                                           (oscillationCenter - Amplitude[2] - (float)Math.Cos((position.X + horizontalSpeed) / 30f) * Amplitude[2])
                                            ) - position;
                     break;
 
